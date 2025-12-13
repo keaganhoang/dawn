@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -6,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Hello world from Github",
+            "heading": "Discovery your favorite collection",
             "heading_size": "h0"
           }
         },
@@ -29,11 +38,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+      "block_order": ["heading", "text", "button"],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -63,10 +68,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+      "block_order": ["heading", "text"],
       "settings": {
         "color_scheme": "scheme-1",
         "full_width": true,
@@ -117,11 +119,7 @@
           }
         }
       },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
+      "block_order": ["collection-0", "product", "collection-1"],
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -176,11 +174,7 @@
           }
         }
       },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
+      "block_order": ["column1", "column2", "column3"],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -199,12 +193,5 @@
       }
     }
   },
-  "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
-  ]
+  "order": ["image_banner", "rich_text", "featured_collection", "collage", "video", "multicolumn"]
 }
