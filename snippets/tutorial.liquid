@@ -1,8 +1,12 @@
 {% assign products = collection.products %}
-{% assign productTitles = products | map: "title" %}
+{% assign productTitles = products | map: "title" | reverse %}
 
 {% for productTitle in productTitles %}
   <p>{{ productTitle }}</p>
 {% endfor %}
 
 <p>{{ productTitles | join: ' - ' }}</p>
+
+<p>{{ productTitles | first }}</p>
+<p>{{ productTitles | last }}</p>
+<p>{{ productTitles | size }}</p>
