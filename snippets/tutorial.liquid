@@ -8,7 +8,11 @@
       {% endif %}
     "
   >
-    {{ forloop.index }} - {{ product.title }}
+    {{ forloop.index0 }} - {{ product.title }}
   </p>
-  <p>{{ product.title }}</p>
+  <ul>
+    {% for tag in product.tags %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
 {% endfor %}
