@@ -17,11 +17,14 @@
 {{ myHtmlText | strip_html | truncate: 35 }}
 
 {% assign_myMultilineText = "
-          This is the first line
-          This is the second line
-          This is the third line
-          "
+              This is the first line
+              This is the second line
+              This is the third line
+              "
  | newline_to_br
 %}
 <br>
 <p>{{ myMultilineText }}</p>
+
+{% assign myText = "Hello some extra text some extra text" %}
+<p>{{ myText }}</p>
