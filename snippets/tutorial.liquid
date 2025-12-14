@@ -32,7 +32,12 @@
 
 <p>{{ product.tags }}</p>
 
-{% if product.title contains 'New' %}
+{% for tag in product.tags %}
+    {% if tag contains 'fall' %}
+        <p>fallen of an angel</p>
+    {% endif %}
+    
+{% if product.title contains 'new' %}
   <p>This is a snowboard</p>
 {% endif %}
 
