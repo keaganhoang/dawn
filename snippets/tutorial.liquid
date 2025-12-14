@@ -1,81 +1,14 @@
-{% assign myVariable = '9' %}
-{% assign myString = 'hello' %}
-
-{% comment %} Greater than {% endcomment %}
-{% if myVariable > 10 %}
-  <p>My variable is greater than 10</p>
-{% endif %}
-{% comment %} Lesss than {% endcomment %}
-{% if myVariable < 10 %}
-  <p>my variable is less than 10</p>
-{% endif %}
-{% comment %} Equal {% endcomment %}
-{% if myVariable == 10 %}
-  <p>My variable is equal to 10</p>
-{% endif %}
-
-{% if myString == 'hello' %}
-  <p>myString is hello</p>
-{% endif %}
-
-{% comment %} Greater than or equal to {% endcomment %}
-{% if myVariable >= 10 %}
-  <p>My variable is greater than or equal to 10</p>
-{% endif %}
-
-{% if myVariable <= 10 %}
-  <p>My variable is less than or equal to 10</p>
-{% endif %}
-
-{% if myVariable == 10 %}
-  <p>My variable is equal to 10</p>
-{% endif %}
-
-{% comment %} Container {% endcomment %}
-<p>{{ product.title }}</p>
-
-<p>{{ product.tags }}</p>
-
-{% for tag in product.tags %}
-  {% if tag contains 'fall' %}
-    <p>Fallen of an angel</p>
-  {% elsif tag contains 'summer' %}
-    <p>This is a summer product</p>
-  {% endif %}
+{% for product in collection.products %}
+  <p
+    style="
+      {% if forloop.first %}
+      color: green
+      {% elsif forloop.last %}
+      color: orange
+      {% endif %}
+    "
+  >
+    {{ forloop.index }} - {{ product.title }}
+  </p>
+  <p>{{ product.title }}</p>
 {% endfor %}
-
-{% if product.title contains 'new' %}
-  <p>This is a snowboard</p>
-{% endif %}
-
-{% if product.tags contains 'snow' %}
-  <p>This is a snow product</p>
-{% endif %}
-
-{% unless myVariable <= 10 %}
-  <p>my variable is greater than 10</p>
-{% else %}
-  <p>This product doesn't contain the Premium tag'</p>
-{% endunless %}
-
-{% assign isASnowboard = false %}
-{% if product.title contains 'Snowboard' or product.type == 'snowboard' %}
-  {% assign isASnowboard = true %}
-{% endif %}
-
-{% if isASnowboard and product.price < 7000 %}
-  <p>This is an affordable snowboard</p>
-{% endif %}
-
-{% if product.type != blank %}
-  {% case product.type %}
-    {% when 'snowboard' %}
-      <p>This is a snowboard</p>
-    {% when 'ski wax' %}
-      <p>This is a ski wax</p>
-    {% when 'gift card' %}
-      <p>This is a gift card</p>
-    {% else %}
-      <p>No known product type</p>
-  {% endcase %}
-{% endif %}
