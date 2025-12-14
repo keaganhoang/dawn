@@ -1,4 +1,4 @@
-{% assign myNumber = 10 %}
+{% assign myNumber = 11 %}
 
 {% comment %} {% assign myNewNumber = myNumber | times: 5 %}
 {% assign myNewNumber = myNumber | divided_by: 5 %} {% endcomment %}
@@ -9,3 +9,11 @@
 {% if myNewNumber > 5 %}
   <p>my Number is greater than 5</p>
 {% endif %}
+
+{% assign moduloOfMyNumber = myNewNumber | modulo: 2 %}
+{% if moduloOfMyNumber == 0 %}
+  {% if myNewNumber | modulo: 2 == 0 %}
+    <p>Even</p>
+  {% else %}
+    <p>Odd</p>
+  {% endif %}
