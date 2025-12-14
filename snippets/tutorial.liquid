@@ -24,3 +24,6 @@
 {% for price in allPrices %}
   <p>{{ price | money }}</p>
 {% endfor %}
+
+{% assign sumOfPrices = allPrices | sum %}
+<p>Total of all items: {{ sumOfPrices | money }}</p>
