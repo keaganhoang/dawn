@@ -20,5 +20,11 @@
 {% assign myAbsNumber = -11 | abs %}
 <p>{{ myAbsNumber }}</p>
 
-{% assign myRoundedNumber = 10.6 | round %}
+{% assign myRoundedNumber = 10.5 | floor %}
 <p>{{ myRoundedNumber }}</p>
+
+{% assign myCappedValue = 100 %}
+<p>{{ myCappedValue | at_most: 80 }}</p>
+
+{% assign myCappedValue = 60 %}
+<p>{{ myCappedValue | at_least: 70 }}</p>
