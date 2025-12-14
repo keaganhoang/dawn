@@ -36,3 +36,10 @@
 <p>
   {{ product.title }}
 </p>
+{% capture html %}
+{% endcapture %}
+
+{% assign html = '<div>
+<p> Hello {{  product.title }}
+</p>
+</div>' %}
