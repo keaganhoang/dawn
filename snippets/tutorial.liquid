@@ -2,7 +2,7 @@
   This is a comment and should not be rendered
 {% endcomment %}
 {% assign myString = '1234' %}
-{{ myString }}
+{{ myString }}, {{ myString.size }}
 
 <br>
 
@@ -10,3 +10,29 @@
 {% assign myFloatingPoint = 123.5 %}
 
 {{ myNumber }}, {{ myFloatingPoint }}
+
+<br>
+
+{% assign myBoolean = true %}
+{{ myBoolean }}
+
+<br>
+{% comment %} nil or null {% endcomment %}
+{% assign myNil = null %}
+
+{% if undefinedVariable == null %}
+  <p>undefinedVariable is equal to nil</p>
+{% endif %}
+
+<br>
+{% comment %} Array {% endcomment %}
+{{ product.tags.size }}
+{% for tag in product.tags %}
+  {{ tag }}
+  <br>
+{% endfor %}
+<br>
+{% comment %} Object {% endcomment %}
+<p>
+  {{ product.title }}
+</p>
