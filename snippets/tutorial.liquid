@@ -1,4 +1,5 @@
-{% assign myVariable = 2 %}
+{% assign myVariable = '9' %}
+{% assign myString = 'hello' %}
 
 {% comment %} Greater than {% endcomment %}
 {% if myVariable > 10 %}
@@ -13,6 +14,10 @@
   <p>My variable is equal to 10</p>
 {% endif %}
 
+{% if myString == 'hello' %}
+  <p>myString is hello</p>
+{% endif %}
+
 {% comment %} Greater than or equal to {% endcomment %}
 {% if myVariable >= 10 %}
   <p>My variable is greater than or equal to 10</p>
@@ -20,4 +25,13 @@
 
 {% if myVariable <= 10 %}
   <p>My variable is less than or equal to 10</p>
+{% endif %}
+
+{% comment %} Container {% endcomment %}
+<p>{{ product.title }}</p>
+
+<p>{{ product.tags }}</p>
+
+{% if product.title contains 'Snowboard' %}
+  <p>This is a ssnowboard</p>
 {% endif %}
