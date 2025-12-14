@@ -10,10 +10,15 @@
   >
     {{ forloop.index }} - {{ product.title }}
   </p>
-  <h2>Tags</h2>
-  <ul>
-    {% for tag in product.tags %}
-      <li>{{ tag }}</li>
-    {% endfor %}
-  </ul>
+  {% if product.tags.size > 0 %}
+    <h2>Tags</h2>
+    <ul>
+      {% for tag in product.tags %}
+        <li>
+          Product Index: {{ forloop.index -}}
+          {{- tag }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 {% endfor %}
