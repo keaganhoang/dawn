@@ -28,3 +28,7 @@
 {% else %}
   <p>This collection has no product</p>
 {% endfor %}
+
+{% for i in (11..15) %}
+  <p>Hello world {{ i }} {{ forloop.index }}</p>
+{% endfor %}
