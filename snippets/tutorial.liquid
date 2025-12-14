@@ -20,7 +20,7 @@
   <p>{{ product.title }} - {{ product.price | money }}</p>
 {% endfor %}
 
-{% assign allPrices = products | map: 'price' %}
+{% assign allPrices = products | map: 'price' | sort %}
 {% for price in allPrices %}
   <p>{{ price | money }}</p>
 {% endfor %}
