@@ -12,11 +12,19 @@
     <h2>Tags</h2>
     <ul>
       {% for tag in product.tags %}
+        {% if tag == "Sport" %}
+          {% continue %}
+        {% endif %}
         <li>
-          Product Index: {{ forloop.index -}} | Tag:
-          {{- tag }}
+          Product Index: {{ forloop.parentloop.index }} | Tag:
+          {{ tag }}
         </li>
+      {% endfor %}
+      {% for i in (1..5) %}
+        <p>hello world {{ i }}</p>
       {% endfor %}
     </ul>
   {% endif %}
+{% else %}
+  <p>This collection has no product</p>
 {% endfor %}
