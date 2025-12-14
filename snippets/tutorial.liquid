@@ -1,7 +1,5 @@
-{% paginate collection.products by 5 %}
-  {% for product in collection.products %}
-    <p>{{ product.title }}</p>
-  {% endfor %}
+{% assign myNumber = 10 %}
 
-  {{ paginate | default_pagination }}
-{% endpaginate %}
+{% assign myNewNumber = myNumber | plus: 5 %}
+
+{{ myNewNumber }}
