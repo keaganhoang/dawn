@@ -2,6 +2,6 @@
 {% assign myOtherString = ' some extra text ' %}
 <p>{{ myString | upcase | append: myOtherString | downcase }}</p>
 
-{% assign myStringWithWhitespace = "hello this has whitespace" %}
+{% assign myStringWithWhitespace = "hello this has whitespace  " %}
 <p>
   {{ myStringWithWhiteSpace | append: "!" }}</p>
