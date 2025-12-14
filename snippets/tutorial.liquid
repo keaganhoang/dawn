@@ -8,8 +8,10 @@
 <p>
   {{ myStringWithWhiteSpace | strip | append: "!" }}</p>
 
-{% assign myHtmlText = "<p style='color: red'>Hello</p>" %}
+{% assign myHtmlText = "<p style='color: red'>Hello some extra text</p>" %}
 {{ myHtmlText | strip_html }}
 
 {% assign myLongString = "This is some very long text that will be trimmed" %}
-<p>{{ myLongString }}</p>
+<p>{{ myLongString | truncatewords: 4 }}</p>
+
+{{ myHtmlText | truncate: 35 }}
