@@ -22,5 +22,5 @@
 
 {% assign allPrices = products | map: 'price' %}
 {% for price in allPrices %}
-  <p>{{ price }}</p>
+  <p>{{ price | money }}</p>
 {% endfor %}
