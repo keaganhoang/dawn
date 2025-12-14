@@ -17,5 +17,8 @@
   <p>Odd</p>
 {% endif %}
 
-{% assign myAbsNumber = -11 %}
+{% assign myAbsNumber = -11 | abs %}
 <p>{{ myAbsNumber }}</p>
+
+{% assign myRoundedNumber = 10.6 | round %}
+<p>{{ myRoundedNumber }}</p>
