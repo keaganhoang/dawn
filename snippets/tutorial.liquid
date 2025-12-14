@@ -67,13 +67,15 @@
   <p>This is an affordable snowboard</p>
 {% endif %}
 
-{% case product.type %}
-  {% when 'snowboard' %}
-    <p>This is a snowboard</p>
-  {% when 'ski wax' %}
-    <p>This is a ski wax</p>
-  {% when 'gift card' %}
-    <p>This is a gift card</p>
-  {% else %}
-    <p>No known product type</p>
-{% endcase %}
+{% if product.type != blank %}
+  {% case product.type %}
+    {% when 'snowboard' %}
+      <p>This is a snowboard</p>
+    {% when 'ski wax' %}
+      <p>This is a ski wax</p>
+    {% when 'gift card' %}
+      <p>This is a gift card</p>
+    {% else %}
+      <p>No known product type</p>
+  {% endcase %}
+{% endif %}
