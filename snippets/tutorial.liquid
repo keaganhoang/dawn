@@ -15,6 +15,7 @@
   <p>test</p>
 {% endif %}
 
-{% for product in products %}
+{% assign priceSortedItems = products | sort: 'price' %}
+{% for product in priceSortedItems %}
   <p>{{ product.title }} - {{ product.price | money }}</p>
 {% endfor %}
