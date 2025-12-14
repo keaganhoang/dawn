@@ -1,13 +1,11 @@
 {% for product in collection.products %}
-  <p
-    style="
+  <p style="
       {% if forloop.first %}
       color: green
       {% elsif forloop.last %}
       color: orange
       {% endif %}
-    "
-  >
+    ">
     {{ forloop.index }} - {{ product.title }}
   </p>
   {% if product.tags.size > 0 %}
@@ -15,7 +13,7 @@
     <ul>
       {% for tag in product.tags %}
         <li>
-          Product Index: {{ forloop.index -}}
+          Product Index: {{ forloop.index -}} | Tag:
           {{- tag }}
         </li>
       {% endfor %}
