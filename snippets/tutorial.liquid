@@ -1,6 +1,8 @@
 {% assign products = collection.products %}
-{% assign_productTitles = products | map: "title" %}
+{% assign productTitles = products | map: "title" %}
 
 {% for productTitle in productTitles %}
   <p>{{ productTitle }}</p>
 {% endfor %}
+
+<p>{{ productTitles | join: ' - ' }}</p>
