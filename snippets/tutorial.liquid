@@ -7,6 +7,10 @@
 
 <p>{{ productTitles | join: ' - ' }}</p>
 
-<p>{{ productTitles | first }}</p>
-<p>{{ productTitles | last }}</p>
-<p>{{ productTitles | size }}</p>
+<p>{{ productTitles.first }}</p>
+<p>{{ productTitles.last }}</p>
+<p>{{ productTitles.size }}</p>
+
+{% if productTitles.size > 5 %}
+  <p>test</p>
+{% endif %}
