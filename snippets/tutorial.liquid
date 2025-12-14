@@ -14,4 +14,14 @@
 {% assign myLongString = "This is some very long text that will be trimmed" %}
 <p>{{ myLongString | truncatewords: 4 }}</p>
 
-{{ myHtmlText | truncate: 35 }}
+{{ myHtmlText | strip_html | truncate: 35 }}
+
+{% assign_myMultilineText = "
+          This is the first line
+          This is the second line
+          This is the third line
+          "
+ | newline_to_br
+%}
+<br>
+<p>{{ myMultilineText }}</p>
