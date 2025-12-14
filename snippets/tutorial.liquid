@@ -1,10 +1,23 @@
-{% assign myVariable = 11 %}
+{% assign myVariable = 2 %}
 
+{% comment %} Greater than {% endcomment %}
 {% if myVariable > 10 %}
-  <p>Another instruction</p>
-  <p>Variable greater than 10</p>
-  {% assign myNestedVariable = 20 %}
-  <p>{{ myNestedVariable }}</p>
-{% else %}
-  <p>Variable not greater than 10</p>
+  <p>My variable is greater than 10</p>
+{% endif %}
+{% comment %} Lesss than {% endcomment %}
+{% if myVariable < 10 %}
+  <p>my variable is less than 10</p>
+{% endif %}
+{% comment %} Equal {% endcomment %}
+{% if myVariable == 10 %}
+  <p>My variable is equal to 10</p>
+{% endif %}
+
+{% comment %} Greater than or equal to {% endcomment %}
+{% if myVariable >= 10 %}
+  <p>My variable is greater than or equal to 10</p>
+{% endif %}
+
+{% if myVariable <= 10 %}
+  <p>My variable is less than or equal to 10</p>
 {% endif %}
