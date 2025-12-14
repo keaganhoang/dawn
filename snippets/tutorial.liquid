@@ -4,4 +4,4 @@
 
 {% assign myStringWithWhitespace = "hello this has whitespace  " %}
 <p>
-  {{ myStringWithWhiteSpace | append: "!" }}</p>
+  {{ myStringWithWhiteSpace | strip | append: "!" }}</p>
