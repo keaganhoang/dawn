@@ -17,10 +17,10 @@
 {{ myHtmlText | strip_html | truncate: 35 }}
 
 {% assign myMultilineText = '
-                                            This is the first line
-                                            This is the second line
-                                            This is the third line
-                                            '
+                                                This is the first line
+                                                This is the second line
+                                                This is the third line
+                                                '
  | newline_to_br
 %}
 <br>
@@ -32,5 +32,7 @@
 {% assign myNumbers = "html |orange,css|blue,javascript|yellow" | split: ',' %}
 
 {% for language in myNumbers %}
-  <p>{{ language }}</p>
+  {% assign languageName = language | split: "|" | first %}
+  {% assign languageColor = language | split: "|" | last %}
+  <p style="color: {{languageColor}}">{{ languageName }}</p>
 {% endfor %}
