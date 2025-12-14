@@ -12,8 +12,7 @@
 
 {% assign moduloOfMyNumber = myNewNumber | modulo: 2 %}
 {% if moduloOfMyNumber == 0 %}
-  {% if myNewNumber | modulo: 2 == 0 %}
-    <p>Even</p>
-  {% else %}
-    <p>Odd</p>
-  {% endif %}
+  <p>Even</p>
+{% else %}
+  <p>Odd</p>
+{% endif %}
