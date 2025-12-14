@@ -14,3 +14,7 @@
 {% if productTitles.size > 5 %}
   <p>test</p>
 {% endif %}
+
+{% for product in products %}
+  <p>{{ product.title }} - {{ product.price | money }}</p>
+{% endfor %}
