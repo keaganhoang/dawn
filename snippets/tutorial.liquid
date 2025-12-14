@@ -1,45 +1,10 @@
-{% comment %}
-  This is a comment and should not be rendered
-{% endcomment %}
-{% assign myString = '1234' %}
-{{ myString }}, {{ myString.size }}
+{% assign myVariable = 11 %}
 
-<br>
-
-{% assign myNumber = 123 %}
-{% assign myFloatingPoint = 123.5 %}
-
-{{ myNumber }}, {{ myFloatingPoint }}
-
-<br>
-
-{% assign myBoolean = true %}
-{{ myBoolean }}
-
-<br>
-{% comment %} nil or null {% endcomment %}
-{% assign myNil = null %}
-
-{% if undefinedVariable == null %}
-  <p>undefinedVariable is equal to nil</p>
+{% if myVariable > 10 %}
+  <p>Another instruction</p>
+  <p>Variable greater than 10</p>
+  {% assign myNestedVariable = 20 %}
+  <p>{{ myNestedVariable }}</p>
+{% else %}
+  <p>Variable not greater than 10</p>
 {% endif %}
-
-<br>
-{% comment %} Array {% endcomment %}
-{{ product.tags.size }}
-{% for tag in product.tags %}
-  {{ tag }}
-  <br>
-{% endfor %}
-<br>
-{% comment %} Object {% endcomment %}
-<p>
-  {{ product.title }}
-</p>
-{% capture html %}
-{% endcapture %}
-
-{% assign html = '<div>
-<p> Hello {{  product.title }}
-</p>
-</div>' %}
