@@ -1,38 +1,6 @@
-{% assign myString = "hello world" %}
-{% assign myOtherString = ' some extra text ' %}
-<p>{{ myString | upcase | append: myOtherString | downcase }}</p>
+{% assign products = collection.products %}
+{% assign_productTitles = products | map: "title" %}
 
-{% assign myStringWithWhiteSpace = "hello this has whitespace  " %}
-<p>
-  {{ myStringWithWhiteSpace | append: "!" }}</p>
-<p>
-  {{ myStringWithWhiteSpace | strip | append: "!" }}</p>
-
-{% assign myHtmlText = "<p style='color: red'>Hello some extra text</p>" %}
-{{ myHtmlText | strip_html }}
-
-{% assign myLongString = "This is some very long text that will be trimmed" %}
-<p>{{ myLongString | truncatewords: 4 }}</p>
-
-{{ myHtmlText | strip_html | truncate: 35 }}
-
-{% assign myMultilineText = '
-                                                This is the first line
-                                                This is the second line
-                                                This is the third line
-                                                '
- | newline_to_br
-%}
-<br>
-<p>{{ myMultilineText }}</p>
-
-{% assign myText = "Hello some extra text some extra text" %}
-<p>{{ myText | replace_last: 'text', 'string' }}</p>
-
-{% assign myNumbers = "html |orange,css|blue,javascript|yellow" | split: ',' %}
-
-{% for language in myNumbers %}
-  {% assign languageName = language | split: "|" | first %}
-  {% assign languageColor = language | split: "|" | last %}
-  <p style="color: {{languageColor}}">{{ languageName }}</p>
+{% for productTitle in productTitles %}
+  <p>{{ productTitle }}</p>
 {% endfor %}
