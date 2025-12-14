@@ -17,10 +17,10 @@
 {{ myHtmlText | strip_html | truncate: 35 }}
 
 {% assign myMultilineText = '
-                        This is the first line
-                        This is the second line
-                        This is the third line
-                        '
+                              This is the first line
+                              This is the second line
+                              This is the third line
+                              '
  | newline_to_br
 %}
 <br>
@@ -28,3 +28,9 @@
 
 {% assign myText = "Hello some extra text some extra text" %}
 <p>{{ myText | replace_last: 'text', 'string' }}</p>
+
+{% assign myNumbers = "1,2,3,4" %}
+
+{% for number in myNumbers %}
+  <p>{{ number }}</p>
+{% endfor %}
