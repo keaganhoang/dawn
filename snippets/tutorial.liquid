@@ -33,13 +33,15 @@
 <p>{{ product.tags }}</p>
 
 {% for tag in product.tags %}
-    {% if tag contains 'fall' %}
-        <p>fallen of an angel</p>
-    {% endif %}
-    
+  {% if tag contains 'fall' %}
+    <p>fallen of an angel</p>
+  {% endif %}
+{% endfor %}
+
 {% if product.title contains 'new' %}
   <p>This is a snowboard</p>
 {% endif %}
 
-{% if product.tags contains "Winter" %}
-    <p>This is a Winter product</p>
+{% if product.tags contains 'Winter' %}
+  <p>This is a Winter product</p>
+{% endif %}
